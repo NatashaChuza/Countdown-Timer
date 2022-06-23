@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/66dff7ca5e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container center-align center-justify full-screen">
+      <div class="outer container border flex center-align center-justify">
+        <div class="inner container border column">
+          <div class="container flex one center-align center-justify">
+            <h2>Count Down Timer</h2>
+          </div>
+          <div class="flex one container center-align center-justify">
+            <div class="container center-align buttons evenly-justify">
+              <div class="container one"></div>
+              <div class="container two center-justify">
+                <div class="container one center-justify" id="times">
+                  <div class="container one center-justify" id="inputs">
+                    <input
+                      placeholder="HH"
+                      name="hours"
+                      onchange="timeInserted()"
+                    />
+                    <strong>:</strong>
+                    <input
+                      placeholder="MM"
+                      name="minutes"
+                      onchange="timeInserted()"
+                    />
+                    <strong>:</strong>
+                    <input
+                      placeholder="SS"
+                      name="seconds"
+                      onchange="timeInserted()"
+                    />
+                  </div>
+                  <div class="container one center-justify" id="time"></div>
+                </div>
+              </div>
+              <div class="container two center-justify evenly-justify">
+                <button onclick="onStart()" id="start">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+                <button onclick="onPause()" class="invisible" id="pause">
+                  <i class="fa-solid fa-pause"></i>
+                </button>
+                <button onclick="onReset()" class="invisible" id="reset">
+                  <i class="fa-solid fa-backward-step"></i>
+                </button>
+              </div>
+              <div class="container one"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
